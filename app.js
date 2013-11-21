@@ -13,7 +13,6 @@ var options = {
     ,method: 'POST'
     ,headers: {
         'Accept':'application/json, text/javascript, */*; q=0.01'
-        ,'Accept-Encoding':'gzip,deflate,sdch'
         ,'Accept-Language':'en-US,en;q=0.8,es;q=0.6'
         ,'Connection':'keep-alive'
         ,'Content-Length':'13'
@@ -33,7 +32,7 @@ var vote = function() {
         //res.setEncoding('utf8');
         res.on('data', function (chunk) {
             count++;
-            console.log('['+count+'] BODY: ' + JSON.stringify(chunk));
+            console.log('['+count+'] BODY: ' + chunk );
         });
     });
 
