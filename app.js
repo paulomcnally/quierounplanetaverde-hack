@@ -29,7 +29,7 @@ var options = {
 var vote = function() {
 
     var req = http.request(options, function(res) {
-        //res.setEncoding('utf8');
+        res.setEncoding('utf8');
         res.on('data', function (chunk) {
             count++;
             console.log('['+count+'] BODY: ' + chunk );
